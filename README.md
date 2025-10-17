@@ -67,7 +67,7 @@ Messages:
 - If `toCase` value is not from listed above: `This case is not supported. Available cases: SNAKE, KEBAB, CAMEL, PASCAL, UPPER.`
 
 #### Invoke business logic
-If validation is called you should invoke business logic (`convertToCase` function from `src/convertToCase` folder). It accepts two params: case name and text to convert.
+If validation is called you should invoke business logic (`convertToCase` function from `src/convertToCase` folder). It accepts two params: text to convert and case name.
 > Business logic is also covered with tests. They are already passed. Just for you to be sure that it works correctly.
 
 Function return the next object:
@@ -80,7 +80,7 @@ Function return the next object:
 
 For example:
 ```javascript
-const result = convertToCase('UPPER', 'writeFile');
+const result = convertToCase('writeFile', 'UPPER');
 
 console.log(result); // { originalCase: 'CAMEL', convertedText: 'WRITE_FILE' }
 ```
